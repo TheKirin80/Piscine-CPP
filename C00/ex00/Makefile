@@ -14,7 +14,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 all:		${NAME}
 
-.c.o :
+.cpp.o :
 			$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 ${NAME}:	${OBJS}

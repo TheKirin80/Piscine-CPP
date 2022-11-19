@@ -1,10 +1,10 @@
-SRCS = 	megaphone.cpp
+SRCS = Contact.cpp PhoneBook.cpp main.cpp
 
 INC		= -I includes -I /usr/include
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME 	= megaphone
+NAME 	= PhoneBook
 
 CC 		= c++
 
@@ -14,7 +14,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 all:		${NAME}
 
-.c.o :
+.cpp.o :
 			$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 ${NAME}:	${OBJS}
