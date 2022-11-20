@@ -1,4 +1,7 @@
-SRCS = Contact.cpp PhoneBook.cpp main.cpp
+SRCS =	main.cpp\
+		Contact.cpp\
+		PhoneBook.cpp\
+		tool.cpp\
 
 INC		= -I includes -I /usr/include
 

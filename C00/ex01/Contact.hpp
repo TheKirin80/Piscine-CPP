@@ -1,8 +1,7 @@
-#include <string>
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include <string>
+#include "header.hpp"
 
 class Contact
 {

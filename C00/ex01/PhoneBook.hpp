@@ -1,25 +1,26 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include "Contact.hpp"
+#include "header.hpp"
 
 class PhoneBook
 {
-    public :
+	public :
 
-        // PhoneBook();
-        // ~PhoneBook();
-        Contact getContact(int index);
-        int getIndex(void);
-        void setContact(int index, Contact contact);
-        void setIndex(int index);
-        void addContact(void);
-        void searchContact();
+		PhoneBook();
+		~PhoneBook();
+		Contact getContact(int index);
+		int		getIndex(void);
+		void	setContact(int index, Contact contact);
+		void	setIndex(int index);
+		int		addContact(void);
+		//void searchContact();
 
-    private :
-        
-        Contact m_contact[8];
-        int m_index;
+	private :
+		
+		Contact m_contact[8];
+		int		m_fill;
+		int		m_index;
 };
 
 #endif
