@@ -14,7 +14,7 @@ class PhoneBook
 		void	setContact(int index, Contact contact);
 		void	setIndex(int index);
 		int		addContact(void);
-		//void searchContact();
+		//void    searchContact();
 
 	private :
 		

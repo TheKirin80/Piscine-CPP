@@ -33,7 +33,7 @@ int	PhoneBook::addContact(void)
 	if (instancy("Last name : ", &str, 0) == ERROR)
 		return (ERROR);
 	contact.setLastName(str);
-	if (instancy("Phone number : ", &str, 1) == ERROR)
+	if (instancy("Phone number (need to be in this form : 0612345678): ", &str, 1) == ERROR)
 		return (ERROR);
 	contact.setPhoneNumber(str);
 	if (instancy("Darkest secret : ",&str, 0) == ERROR)
@@ -43,7 +43,19 @@ int	PhoneBook::addContact(void)
 	m_index++;
 	if (m_fill < 8)
 		m_fill++;
+    std::cout << std::endl << std::endl << "              Contact add in your phonebook" << std::endl;
+    sleep(2);
 	return (OK);
+}
+
+void    PhoneBook::searchContact(void)
+{
+    for (int i = 0; i < m_fill; i++)
+    {
+        std::cout << "- ---------- - ---------- - ---------- - ---------- -" << std::endl ;
+        std::cout << 
+        std::cout << "- ---------- - ---------- - ---------- - ---------- -" << std::endl ;
+    }
 }
 
 PhoneBook::~PhoneBook(void){}

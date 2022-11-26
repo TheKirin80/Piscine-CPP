@@ -17,6 +17,20 @@ int wspace(std::string *str)
 	return (N_FOUND);
 }
 
+int	isnum(std::string *str)
+{
+	int len = str->length();
+	for (int i  = 0 ; i < len ; i++)
+	{
+		if (isdigit((*str)[i]) == 0)
+		{
+			std::cout << "ici";
+			return (ERROR); 
+		}	
+	}
+	return (OK);
+}
+
 int secure_getline(std::string *str)
 {
 	std::getline(std::cin, *str);
@@ -33,11 +47,10 @@ int secure_getline(std::string *str)
 	}
 }
 
-int instancy(std::string post, std::string *str, int i)
+int instancy(std::string post, std::string *str, int phone)
 {
 	int     pass;
 
-	pass = i;
 	pass = 0;
 	while (pass == 0)
 	{
@@ -51,7 +64,11 @@ int instancy(std::string post, std::string *str, int i)
 		if (wspace(str) == FOUND)
 		{
 			//std::cout << "instancy wsp" << std::endl;
-			pass = 1;
+			int len = str->length();
+			if ((phone == 1 && len == 10 && isnum(str) == OK) || (phone == 0))
+				pass = 1;
+			else
+				pass = 0;
 		}
 	}
 	return (OK);
