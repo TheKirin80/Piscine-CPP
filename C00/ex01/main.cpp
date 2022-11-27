@@ -29,7 +29,7 @@ int main ()
 		}
 		else if (choice == "SEARCH")
 		{
-			if (myphonebook.addContact() == ERROR)
+			if (myphonebook.searchContact() == ERROR)
 				return (ERROR);		
 		}
 		else if (choice == "EXIT")

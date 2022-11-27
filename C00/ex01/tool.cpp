@@ -24,7 +24,7 @@ int	isnum(std::string *str)
 	{
 		if (isdigit((*str)[i]) == 0)
 		{
-			std::cout << "ici";
+			//std::cout << "ici";
 			return (ERROR); 
 		}	
 	}
@@ -72,4 +72,28 @@ int instancy(std::string post, std::string *str, int phone)
 		}
 	}
 	return (OK);
+}
+
+std::string affichage(std::string str)
+{
+	std::string aff;
+
+	//std::cout << "debut affichage" << std::endl;
+	if (str.length() < 10)
+	{
+		aff = str + ' ';
+		while (aff.length() < 10)
+			aff = aff + ' ';
+	}
+	else if (str.length() > 10)
+	{
+		aff = str.substr(0,9);
+		aff = aff + '.';
+	}
+	else
+	{
+		aff = str;
+	}
+	//std::cout << "fin affichage" << std::endl;
+	return (aff);
 }

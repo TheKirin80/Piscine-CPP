@@ -13,8 +13,10 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-int wspace(std::string str);
-int secure_getline(std::string str);
+int wspace(std::string *str);
+int	isnum(std::string *str);
+int secure_getline(std::string *str);
 int instancy(std::string post, std::string *str, int i);
+std::string affichage(std::string str);
 #endif
 
