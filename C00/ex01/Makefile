@@ -9,19 +9,20 @@ OBJS	= ${SRCS:.cpp=.o}
 
 NAME 	= PhoneBook
 
-CC 		= c++
+CXX 		= c++
 
 RM 		= rm -f
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+#CXXFLAGS	+= -g3 -fsanitize=address -fsanitize=undefined -fsanitize=leak -Weffc++
 
 all:		${NAME}
 
 .cpp.o :
-			$(CC) $(CFLAGS) $(INC) -c $< -o $@
+			$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 ${NAME}:	${OBJS}
-			$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:		
 			${RM} ${OBJS} 

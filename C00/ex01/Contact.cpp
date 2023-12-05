@@ -10,6 +10,11 @@ std::string Contact::getLastName(void)
     return this->m_last_name;
 }
 
+std::string Contact::getNickName(void)
+{
+    return this->m_nickname;
+}
+
 std::string Contact::getPhoneNumber(void)
 {
     return this->m_phone_number;
@@ -28,6 +33,11 @@ void Contact::setFirstName(std::string str)
 void Contact::setLastName(std::string str)
 {
     this->m_last_name = str;
+}
+
+void Contact::setNickName(std::string str)
+{
+    this->m_nickname = str;
 }
 
 void Contact::setPhoneNumber(std::string str)

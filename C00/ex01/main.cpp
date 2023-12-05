@@ -21,7 +21,8 @@ int main ()
 		std::cout << "|                                                        |" << std::endl;
 		std::cout << "----------------------------------------------------------" << std::endl << std::endl << std::endl;
 
-		std::getline(std::cin, choice);
+		if (secure_getline(&choice) == ERROR)
+			return (ERROR);
 		if (choice == "ADD")
 		{
 			if (myphonebook.addContact() == ERROR)

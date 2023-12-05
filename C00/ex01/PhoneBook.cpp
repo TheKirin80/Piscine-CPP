@@ -33,6 +33,9 @@ int	PhoneBook::addContact(void)
 	if (instancy("Last name : ", &str, 0) == ERROR)
 		return (ERROR);
 	contact.setLastName(str);
+	if (instancy("Nickname : ", &str, 0) == ERROR)
+		return (ERROR);
+	contact.setNickName(str);
 	if (instancy("Phone number (need to be in this form : 0612345678): ", &str, 1) == ERROR)
 		return (ERROR);
 	contact.setPhoneNumber(str);
@@ -61,13 +64,13 @@ int    PhoneBook::searchContact(void)
 		sleep(3);
 		return (OK);
 	}
-	std::cout << "- --- - ---------- - ---------- - ---------- - ---------- -" << std::endl ;
+	std::cout << "- --- - ---------- - ---------- - ---------- - ---------- - ---------- -" << std::endl ;
     for (int i = 0; i < m_fill; i++)
     {
 		//std::cout << "je suis la" << i << std::endl;
-        std::cout << "| " << " " << i << " " << " | " << affichage(m_contact[i].getFirstName()) << " | " << affichage(m_contact[i].getLastName()) << " | " << affichage(m_contact[i].getPhoneNumber()) << " | " << affichage(m_contact[i].getDarkestSecret()) << " |" << std::endl;
+        std::cout << "| " << " " << i << " " << " | " << affichage(m_contact[i].getFirstName()) << " | " << affichage(m_contact[i].getLastName()) << " | " << affichage(m_contact[i].getNickName()) << " | " << affichage(m_contact[i].getPhoneNumber()) << " | " << affichage(m_contact[i].getDarkestSecret()) << " |" << std::endl;
     }
-	std::cout << "- --- - ---------- - ---------- - ---------- - ---------- -" << std::endl ;
+	std::cout << "- --- - ---------- - ---------- - ---------- - ---------- - ---------- -" << std::endl ;
 	while (valid == 0)
 	{
 		std::cout << std::endl << std::endl << "What contact do you want ? (index 0-7)(8 to quit)" << std::endl;
@@ -78,9 +81,10 @@ int    PhoneBook::searchContact(void)
 			if ((int)str[0] == 8 + '0')
 				return (OK);
 			std::cout << "\033[2J\033[1;1H";
-			std::cout << "First name : " << m_contact[(int)str[0] - '0'].getFirstName() << std::endl;
-			std::cout << "Last name  : " << m_contact[(int)str[0] - '0'].getLastName() << std::endl;
-			std::cout << "Phone number : " << m_contact[(int)str[0] - '0'].getPhoneNumber() << std::endl;
+			std::cout << "First name     : " << m_contact[(int)str[0] - '0'].getFirstName() << std::endl;
+			std::cout << "Last name      : " << m_contact[(int)str[0] - '0'].getLastName() << std::endl;
+			std::cout << "Nickname       : " << m_contact[(int)str[0] - '0'].getNickName() << std::endl;
+			std::cout << "Phone number   : " << m_contact[(int)str[0] - '0'].getPhoneNumber() << std::endl;
 			std::cout << "Darkest secret : " << m_contact[(int)str[0] - '0'].getDarkestSecret() << std::endl;
 			valid = 1;
 			sleep(5);

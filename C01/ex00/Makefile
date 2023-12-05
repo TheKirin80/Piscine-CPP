@@ -1,16 +1,20 @@
-SRCS = 	megaphone.cpp
+SRCS =	main.cpp\
+		Zombie.cpp\
+		newZombie.cpp\
+		randomChump.cpp\
 
 INC		= -I includes -I /usr/include
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME 	= megaphone
+NAME 	= Zombie
 
 CXX 		= c++
 
 RM 		= rm -f
 
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+#CXXFLAGS	+= -g3 -fsanitize=address -fsanitize=undefined -fsanitize=leak -Weffc++
 
 all:		${NAME}
 
@@ -29,4 +33,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re bonus
-

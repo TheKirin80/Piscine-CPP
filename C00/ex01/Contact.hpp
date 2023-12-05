@@ -12,10 +12,12 @@ class Contact
 		//~Contact();
 		std::string getFirstName(void);
 		std::string getLastName(void);
+		std::string getNickName(void);
 		std::string getPhoneNumber(void);
 		std::string getDarkestSecret(void);
 		void setFirstName(std::string str);
 		void setLastName(std::string str);
+		void setNickName(std::string str);
 		void setPhoneNumber(std::string str);
 		void setDarkestSecret(std::string str);
 	
@@ -23,6 +25,7 @@ class Contact
 
 		std::string	m_first_name;
 		std::string	m_last_name;
+		std::string	m_nickname;
 		std::string	m_phone_number;
 		std::string	m_darkest_secret;
 };
