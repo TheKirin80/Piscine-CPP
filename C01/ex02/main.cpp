@@ -15,4 +15,5 @@ int main()
     std::cout << *stringPTR << std::endl;
     std::cout << stringREF << std::endl;
 
+    return (0);
 }
