@@ -1,9 +1,41 @@
-std::string Zombie::getName(void)
+#ifndef FIXED_HPP
+#define FIXED_HPP
+
+
+
+class Fixed
+{
+    public :
+        Fixed(void);
+        Fixed(const Fixed &cop);
+        Fixed &operator=(const Fixed &eg);
+        ~Fixed(void);
+    private :
+
+};
+
+#endif
+
+#include "Fixed.hpp"
+
+Fixed::Fixed(void){return;}
+Fixed::Fixed(const Fixed &cop)
+{
+    *this = cop;
+}
+Fixed::Fixed &operator=(const Fixed &eg)
+{
+    
+}
+Fixed::~Fixed(void){return;}
+
+
+std::string Fixed::getName(void)
 {
     return this->name;
 }
 
-void Zombie::setName(std::string str)
+void Fixed::setName(std::string str)
 {
     this->name = str;
 }
