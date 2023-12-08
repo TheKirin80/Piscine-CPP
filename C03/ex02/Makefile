@@ -1,12 +1,13 @@
 SRCS =	main.cpp\
 		ClapTrap.cpp\
 		ScavTrap.cpp\
+		FragTrap.cpp\
 
 INC		= -I includes -I /usr/include
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME 	= ScavTrap
+NAME 	= FragTrap
 
 CXX 		= c++
 

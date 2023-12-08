@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 int main()
 {
     // ClapTrap    Furieux("Furieux");
@@ -40,7 +41,22 @@ int main()
     
     ScavTrap    Furieux3("Furieux3");
     ScavTrap    Furieux4(Furieux3);
+    ScavTrap    FurieuxX = ScavTrap();
+    FurieuxX.attack("Calm");
     Furieux4.attack("Calm");
     Furieux4.guardGate();
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "--FRAGTRAP--" << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+
+    
+    FragTrap    Furieux5("Furieux5");
+    FragTrap    Furieux6(Furieux5);
+    FragTrap    FurieuxY = FragTrap();
+    FurieuxY.highFivesGuys();
+    Furieux6.highFivesGuys();
     return (0);
 }
