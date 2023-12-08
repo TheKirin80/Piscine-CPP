@@ -1,41 +1,41 @@
-#ifndef ClapTrap_HPP
-#define ClapTrap_HPP
+#ifndef ScavTrap_HPP
+#define ScavTrap_HPP
 
 
 
-class ClapTrap
+class ScavTrap
 {
     public :
-        ClapTrap(void);
-        ClapTrap(const ClapTrap &cop);
-        ClapTrap &operator=(const ClapTrap &eg);
-        ~ClapTrap(void);
+        ScavTrap(void);
+        ScavTrap(const ScavTrap &cop);
+        ScavTrap &operator=(const ScavTrap &eg);
+        ~ScavTrap(void);
     private :
 
 };
 
 #endif
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-ClapTrap::ClapTrap(void){return;}
-ClapTrap::ClapTrap(const ClapTrap &cop)
+ScavTrap::ScavTrap(void){return;}
+ScavTrap::ScavTrap(const ScavTrap &cop)
 {
     *this = cop;
 }
-ClapTrap::ClapTrap &operator=(const ClapTrap &eg)
+ScavTrap::ScavTrap &operator=(const ScavTrap &eg)
 {
     
 }
-ClapTrap::~ClapTrap(void){return;}
+ScavTrap::~ScavTrap(void){return;}
 
 
-std::string ClapTrap::getName(void)
+std::string ScavTrap::getName(void)
 {
     return this->name;
 }
 
-void ClapTrap::setName(std::string str)
+void ScavTrap::setName(std::string str)
 {
     this->name = str;
 }

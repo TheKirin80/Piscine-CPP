@@ -1,5 +1,4 @@
 #include "ClapTrap.hpp"
-
 ClapTrap::ClapTrap(void) : _name("random"), _hit_point(10), _energy_point(10), _attack_damage(0)
 {
     // std::cout << "Je suis " << _name << " j'ai " << _hit_point << " point(s) de vie, " << _energy_point << " point(s) d'energie et je tape du "
@@ -19,7 +18,7 @@ ClapTrap::ClapTrap(const ClapTrap &cop)
 }
 ClapTrap    &ClapTrap::operator=(const ClapTrap &eg)
 {
-    std::cout << "Copy assignment operator ClapTrap called" << std::endl;
+    std::cout << "Copy assignment operator  ClapTrap called" << std::endl;
     _name = eg._name;
     _hit_point = eg._hit_point;
     _energy_point = eg._energy_point;
@@ -38,31 +37,31 @@ void ClapTrap::attack(const std::string& target)
     {
         if (_energy_point > 0)
         {
-            std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
+            std::cout << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
             _energy_point = _energy_point - 1;
         }
         else
         {
-            std::cout << "ClapTrap " << _name <<  " don't have the energy for attacking" << std::endl;
+            std::cout << _name <<  " don't have the energy for attacking" << std::endl;
         }
     }
     else
-        std::cout << "ClapTrap " << _name << " don't have the vitality for attacking" << std::endl;
+        std::cout << _name << " don't have the vitality for attacking" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
     if (_hit_point == 0)
     {
-        std::cout << "ClapTrap " << _name << "already have 0 hp" << std::endl;
+        std::cout << _name << "already have 0 hp" << std::endl;
     }
     else
     {
-        std::cout << "ClapTrap " << _name << " take " << amount << " damage" << std::endl;
+        std::cout << _name << " take " << amount << " damage" << std::endl;
         _hit_point = _hit_point - amount;
         if (_hit_point <= 0)
             _hit_point = 0;
-        std::cout << "ClapTrap " << _name << " have " << _hit_point << " HP left" << std::endl;
+        std::cout << _name << " have " << _hit_point << " HP left" << std::endl;
     }
 }
 
@@ -73,14 +72,14 @@ void ClapTrap::beRepaired(unsigned int amount)
         if (_energy_point > 0)
         {
             _hit_point = _hit_point + amount;
-            std::cout << "ClapTrap " << _name << " repaired " << amount << " HP and now he have " << _hit_point << " HP" << std::endl;
+            std::cout << _name << " repaired " << amount << " HP and now he have " << _hit_point << " HP" << std::endl;
             _energy_point = _energy_point - 1;
         }
         else
         {
-            std::cout << "ClapTrap " << _name <<  " don't have the energy for repaired" << std::endl;
+            std::cout << _name <<  " don't have the energy for repaired" << std::endl;
         }
     }
     else
-        std::cout << "ClapTrap " << _name << " don't have the vitality for repaired" << std::endl;
+        std::cout << _name << " don't have the vitality for repaired" << std::endl;
 }
