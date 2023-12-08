@@ -40,6 +40,7 @@ int main()
     
     ScavTrap    Furieux3("Furieux3");
     ScavTrap    Furieux4(Furieux3);
+    Furieux4.takeDamage(0);
     Furieux4.attack("Calm");
     Furieux4.guardGate();
     return (0);

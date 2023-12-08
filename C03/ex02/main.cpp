@@ -42,6 +42,7 @@ int main()
     ScavTrap    Furieux3("Furieux3");
     ScavTrap    Furieux4(Furieux3);
     ScavTrap    FurieuxX = ScavTrap();
+    Furieux4.takeDamage(0);
     FurieuxX.attack("Calm");
     Furieux4.attack("Calm");
     Furieux4.guardGate();
@@ -56,6 +57,7 @@ int main()
     FragTrap    Furieux5("Furieux5");
     FragTrap    Furieux6(Furieux5);
     FragTrap    FurieuxY = FragTrap();
+    Furieux5.takeDamage(0);
     FurieuxY.highFivesGuys();
     Furieux6.highFivesGuys();
     return (0);

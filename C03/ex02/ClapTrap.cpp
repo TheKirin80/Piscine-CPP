@@ -61,7 +61,7 @@ void ClapTrap::takeDamage(unsigned int amount)
         _hit_point = _hit_point - amount;
         if (_hit_point <= 0)
             _hit_point = 0;
-        std::cout << _name << " have " << _hit_point << " HP left" << std::endl;
+        std::cout << _name << " have " << _hit_point << " HP left and " << _energy_point << " Energy"  << std::endl;
     }
 }
 
