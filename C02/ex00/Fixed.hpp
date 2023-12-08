@@ -12,7 +12,7 @@ class Fixed
         Fixed   &operator=(const Fixed&eg);
         ~Fixed(void);
         int getRawBits(void) const;
-        void setRawBits(int val);
+        void setRawBits(int const raw);
     private :
         int value;
         static const int bits = 8;

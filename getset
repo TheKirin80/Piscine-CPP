@@ -1,41 +1,41 @@
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#ifndef ClapTrap_HPP
+#define ClapTrap_HPP
 
 
 
-class Fixed
+class ClapTrap
 {
     public :
-        Fixed(void);
-        Fixed(const Fixed &cop);
-        Fixed &operator=(const Fixed &eg);
-        ~Fixed(void);
+        ClapTrap(void);
+        ClapTrap(const ClapTrap &cop);
+        ClapTrap &operator=(const ClapTrap &eg);
+        ~ClapTrap(void);
     private :
 
 };
 
 #endif
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-Fixed::Fixed(void){return;}
-Fixed::Fixed(const Fixed &cop)
+ClapTrap::ClapTrap(void){return;}
+ClapTrap::ClapTrap(const ClapTrap &cop)
 {
     *this = cop;
 }
-Fixed::Fixed &operator=(const Fixed &eg)
+ClapTrap::ClapTrap &operator=(const ClapTrap &eg)
 {
     
 }
-Fixed::~Fixed(void){return;}
+ClapTrap::~ClapTrap(void){return;}
 
 
-std::string Fixed::getName(void)
+std::string ClapTrap::getName(void)
 {
     return this->name;
 }
 
-void Fixed::setName(std::string str)
+void ClapTrap::setName(std::string str)
 {
     this->name = str;
 }

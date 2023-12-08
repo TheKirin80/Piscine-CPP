@@ -1,23 +1,9 @@
 #include <iostream>
 #include "Fixed.hpp"
 
-// int main( void ) 
-// {
-//     Fixed a;
-//     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-//     std::cout << a << std::endl;
-//     std::cout << ++a << std::endl;
-//     std::cout << a << std::endl;
-//     std::cout << a++ << std::endl;
-//     std::cout << a << std::endl;
-//     std::cout << b << std::endl;
-//     std::cout << Fixed::max( a, b ) << std::endl;
-//     return 0;
-// }
-
 int main(void)
 {
-    
+    std::cout << "Partie Un" << std::endl;
     Fixed a;
     Fixed const b(Fixed(5.05f) * Fixed(2));
     std::cout << a << std::endl;
@@ -28,7 +14,7 @@ int main(void)
     std::cout << b << std::endl;
     std::cout << Fixed::max(a, b) << std::endl;
 
-    std::cout << "Deuxieme partie du main" << std::endl;
+    std::cout << "Partie Deux" << std::endl;
     Fixed   c(15.5f);
     Fixed   d(14.09f);
     std::cout << (c > d) << std::endl;
