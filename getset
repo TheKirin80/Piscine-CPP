@@ -1,41 +1,46 @@
-#ifndef Cat_HPP
-#define Cat_HPP
+#ifndef Brain_HPP
+#define Brain_HPP
 
 
 
-class Cat
+class Brain
 {
     public :
-        Cat(void);
-        Cat(const Cat &cop);
-        Cat &operator=(const Cat &eg);
-        virtual ~Cat(void);
+        Brain(void);
+        Brain(const Brain &cop);
+        Brain &operator=(const Brain &eg);
+        virtual ~Brain(void);
     private :
 
 };
 
 #endif
 
-#include "Cat.hpp"
+#include "Brain.hpp"
 
-Cat::Cat(void){return;}
-Cat::Cat(const Cat &cop)
+Brain::Brain(void)
+{
+    return;
+}
+Brain::Brain(const Brain &cop)
 {
     *this = cop;
 }
-Cat &Cat::operator=(const Cat &eg)
+Brain &Brain::operator=(const Brain &eg)
 {
     
 }
-Cat::~Cat(void){return;}
-
+Brain::~Brain(void)
+{
+    return;
+}
 
 std::string Animal::getType(void) const
 {
     return (this->type);
 }
 
-void Cat::setType(std::string str)
+void Brain::setType(std::string str)
 {
     this->type = str;
 }

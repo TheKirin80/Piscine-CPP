@@ -4,12 +4,13 @@ SRCS =	main.cpp\
 		Dog.cpp\
 		WrongAnimal.cpp\
 		WrongCat.cpp\
+		Brain.cpp\
 
 INC		= -I includes -I /usr/include
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME 	= CryAnimal
+NAME 	= BrainAnimal
 
 CXX 		= c++
 
