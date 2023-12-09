@@ -1,41 +1,41 @@
-#ifndef ScavTrap_HPP
-#define ScavTrap_HPP
+#ifndef Cat_HPP
+#define Cat_HPP
 
 
 
-class ScavTrap
+class Cat
 {
     public :
-        ScavTrap(void);
-        ScavTrap(const ScavTrap &cop);
-        ScavTrap &operator=(const ScavTrap &eg);
-        ~ScavTrap(void);
+        Cat(void);
+        Cat(const Cat &cop);
+        Cat &operator=(const Cat &eg);
+        virtual ~Cat(void);
     private :
 
 };
 
 #endif
 
-#include "ScavTrap.hpp"
+#include "Cat.hpp"
 
-ScavTrap::ScavTrap(void){return;}
-ScavTrap::ScavTrap(const ScavTrap &cop)
+Cat::Cat(void){return;}
+Cat::Cat(const Cat &cop)
 {
     *this = cop;
 }
-ScavTrap::ScavTrap &operator=(const ScavTrap &eg)
+Cat &Cat::operator=(const Cat &eg)
 {
     
 }
-ScavTrap::~ScavTrap(void){return;}
+Cat::~Cat(void){return;}
 
 
-std::string ScavTrap::getName(void)
+std::string Animal::getType(void) const
 {
-    return this->name;
+    return (this->type);
 }
 
-void ScavTrap::setName(std::string str)
+void Cat::setType(std::string str)
 {
-    this->name = str;
+    this->type = str;
 }

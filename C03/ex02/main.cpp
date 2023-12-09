@@ -57,6 +57,7 @@ int main()
     FragTrap    Furieux5("Furieux5");
     FragTrap    Furieux6(Furieux5);
     FragTrap    FurieuxY = FragTrap();
+    Furieux5 = Furieux6;
     Furieux5.takeDamage(0);
     FurieuxY.highFivesGuys();
     Furieux6.highFivesGuys();
