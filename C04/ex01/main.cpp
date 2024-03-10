@@ -13,7 +13,7 @@ int main()
     // const Animal* k = new Cat();
     // std::cout << j->getType() << " " << std::endl;
     // std::cout << k->getType() << " " << std::endl;
-    // k->makeSound(); //will output the cat sound!
+    // k->makeSound();
     // j->makeSound();
     // meta->makeSound();
 
@@ -26,34 +26,34 @@ int main()
     // delete j;
     // delete meta;
 
-    // std::cout << "Premier Test ---------------------------------------------------" << std::endl;
-    // const Animal *all[100];
-    // int	i;
+    std::cout << "Premier Test ---------------------------------------------------" << std::endl;
+    const Animal *all[100];
+    int	i;
 
-    // for(i = 0; i < 50; i++)
-    //     all[i] = new Dog();
-    // for(i = 50; i < 100;i++)
-    //     all[i] = new Cat();
-    // for(i = 0; i < 100; i++)
-    // {
-    //     std::cout << "Animal number: " << i << std::endl;
-    //     all[i]->makeSound();
-    //     delete	all[i];
-    // }
-    std::cout << "Second Test ---------------------------------------------------" << std::endl;
-    const	Dog *vDog = new Dog();
-    const	Cat *vCat = new Cat();
-    const	Dog cDog(*vDog);
-    const	Cat cCat(*vCat);
-    Dog fcDog;
-    Cat fcCat;
-    std::cout << "///////////////////////////////////////" << std::endl;
-    delete vCat;
-    delete vDog;
-    std::cout << "///////////////////////////////////////" << std::endl;
-    fcDog = cDog;
-    fcCat = cCat;
-    std::cout << "///////////////////////////////////////" << std::endl;
+    for(i = 0; i < 50; i++)
+        all[i] = new Dog();
+    for(i = 50; i < 100;i++)
+        all[i] = new Cat();
+    for(i = 0; i < 100; i++)
+    {
+        std::cout << "Animal number: " << i << std::endl;
+        all[i]->makeSound();
+        delete	all[i];
+    }
+    // std::cout << "Second Test ---------------------------------------------------" << std::endl;
+    // const	Dog *vDog = new Dog();
+    // const	Cat *vCat = new Cat();
+    // const	Dog cDog(*vDog);
+    // const	Cat cCat(*vCat);
+    // Dog fcDog;
+    // Cat fcCat;
+    // std::cout << "///////////////////////////////////////" << std::endl;
+    // delete vCat;
+    // delete vDog;
+    // std::cout << "///////////////////////////////////////" << std::endl;
+    // fcDog = cDog;
+    // fcCat = cCat;
+    // std::cout << "///////////////////////////////////////" << std::endl;
     
     // std::cout << "Troisieme Test --------------------------------------------------" << std::endl;
     // Dog test;

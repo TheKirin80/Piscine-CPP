@@ -1,46 +1,44 @@
-#ifndef Brain_HPP
-#define Brain_HPP
+#ifndef AMateria_HPP
+#define AMateria_HPP
 
-
-
-class Brain
+class AMateria
 {
     public :
-        Brain(void);
-        Brain(const Brain &cop);
-        Brain &operator=(const Brain &eg);
-        virtual ~Brain(void);
+        AMateria(void);
+        AMateria(const AMateria &cop);
+        AMateria &operator=(const AMateria &eg);
+        virtual ~AMateria(void);
     private :
 
 };
 
 #endif
 
-#include "Brain.hpp"
+#include "AMateria.hpp"
 
-Brain::Brain(void)
+AMateria::AMateria(void)
 {
     return;
 }
-Brain::Brain(const Brain &cop)
+AMateria::AMateria(const AMateria &cop)
 {
     *this = cop;
 }
-Brain &Brain::operator=(const Brain &eg)
+AMateria &AMateria::operator=(const AMateria &eg)
 {
     
 }
-Brain::~Brain(void)
+AMateria::~AMateria(void)
 {
     return;
 }
 
-std::string Animal::getType(void) const
+std::string AMateria::getType(void) const
 {
     return (this->type);
 }
 
-void Brain::setType(std::string str)
+void AMateria::setType(std::string str)
 {
     this->type = str;
 }

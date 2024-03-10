@@ -72,9 +72,9 @@ int main()
     {
         Animal* j = new Dog();
         Animal* i = new Cat();
-        //Animal* k = new Animal(); Pour montrer que la classe est bien devenu abstraite, le compilo va refuser.
-        *i = *j;
-        i->makeSound();
+        Animal* k = new Animal(); //Pour montrer que la classe est bien devenu abstraite, le compilo va refuser.
+        *i = *j; //Permet de voir qu'on a bien affaire a des animaux par l'appel de la methode d'animal
+        i->makeSound(); // mais il garde le bruit propre 
         std::cout << i->getType() << std::endl;
         j->makeSound();
         std::cout << j->getType() << std::endl;

@@ -10,7 +10,7 @@ INC		= -I includes -I /usr/include
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME 	= AbstraitAnimal
+NAME 	= Materia
 
 CXX 		= c++
 
