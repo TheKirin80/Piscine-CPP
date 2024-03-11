@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "IMateriaSource.hpp"
+#include "AMateria.hpp"
 
 class MateriaSource : public IMateriaSource
 {
@@ -12,8 +13,10 @@ class MateriaSource : public IMateriaSource
         MateriaSource(const MateriaSource &cop);
         MateriaSource &operator=(const MateriaSource &eg);
         virtual ~MateriaSource(void);
+        void        learnMateria(AMateria*);
+        AMateria*   createMateria(std::string const & type);
     private :
-
+        AMateria    *_inventory[4];
 };
 
 #endif

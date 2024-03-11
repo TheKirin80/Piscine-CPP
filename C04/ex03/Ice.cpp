@@ -6,7 +6,7 @@ Ice::Ice(void)
     std::cout << "Ice Default Constructor" << std::endl;
     return;
 }
-Ice::Ice(const Ice &cop)
+Ice::Ice(const Ice &cop) : AMateria("ice")
 {
     *this = cop;
     std::cout << "Ice Recopy Constructor" << std::endl;
@@ -28,13 +28,13 @@ std::string const & Ice::getType(void) const
     return (this->_type);
 }
 
-AMateria* Ice::clone(void)
+AMateria* Ice::clone(void) const
 {
-    return (new Ice(void));
+    return (new Ice());
 }
 
 void    Ice::use(ICharacter& target)
 {
-    std::cout << "* shoots an ice bolt at " << target->_name << " *" << std::endl;
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
     return;
 }

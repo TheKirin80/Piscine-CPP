@@ -3,18 +3,25 @@
 
 #include <iostream>
 #include <cstdlib>
+#include "ICharacter.hpp"
 
-class Character
+class Character : public ICharacter
 {
     public :
         Character(void);
+        Character(std::string const & name);
         Character(const Character &cop);
         Character &operator=(const Character &eg);
         virtual ~Character(void);
+        std::string const & getName(void) const ;
+        void equip(AMateria* m);
+        void unequip(int idx);
+        void use(int idx, ICharacter& target);
+        void add_floor(AMateria *m);
     private :
         std::string _name;
-        AMateria    *bag[4];
-
+        AMateria    *_bag[4];
+        AMateria    *_floor;
 };
 
 #endif

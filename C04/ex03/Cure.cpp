@@ -6,7 +6,7 @@ Cure::Cure(void)
     std::cout << "Cure Default Constructor" << std::endl;
     return;
 }
-Cure::Cure(const Cure &cop)
+Cure::Cure(const Cure &cop) : AMateria("cure")
 {
     *this = cop;
     std::cout << "Cure Recopy Constructor" << std::endl;
@@ -28,13 +28,13 @@ std::string const & Cure::getType(void) const
     return (this->_type);
 }
 
-AMateria* Cure::clone(void)
+AMateria* Cure::clone(void) const
 {
-    return (new Cure(void));
+    return (new Cure());
 }
 
 void    Cure::use(ICharacter& target)
 {
-    std::cout << "* heals " << target->_name << "’s wounds *" << std::endl;
+    std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
     return;
 }

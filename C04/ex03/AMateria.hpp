@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdlib>
+class AMateria;
 #include "ICharacter.hpp"
 
 class AMateria
@@ -22,3 +23,5 @@ class AMateria
     
         std::string _type;
 };
+
+#endif
