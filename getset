@@ -1,44 +1,49 @@
-#ifndef AMateria_HPP
-#define AMateria_HPP
+#ifndef FORM_HPP
+#define FORM_HPP
 
-class AMateria
+class Form
 {
     public :
-        AMateria(void);
-        AMateria(const AMateria &cop);
-        AMateria &operator=(const AMateria &eg);
-        virtual ~AMateria(void);
+        Form(void);
+        Form(const Form &cop);
+        Form &operator=(const Form &eg);
+        virtual ~Form(void);
     private :
 
 };
 
 #endif
 
-#include "AMateria.hpp"
+#include "Form.hpp"
 
-AMateria::AMateria(void)
+Form::Form(void)
 {
     return;
 }
-AMateria::AMateria(const AMateria &cop)
+Form::Form(const Form &cop)
 {
     *this = cop;
 }
-AMateria &AMateria::operator=(const AMateria &eg)
+Form &Form::operator=(const Form &eg)
 {
-    
+    if (this != &eg)
+    {
+
+    }
+    return (*this);
 }
-AMateria::~AMateria(void)
+Form::~Form(void)
 {
     return;
 }
 
-std::string AMateria::getType(void) const
+std::string Form::getGradSign(void) const
 {
-    return (this->type);
+    return (this->_grad_sign);
 }
 
-void AMateria::setType(std::string str)
+void Form::setGrad_sign(std::string str)
 {
-    this->type = str;
+    this->_grad_sign = str;
 }
+
