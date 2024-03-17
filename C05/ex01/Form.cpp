@@ -8,9 +8,9 @@ Form::Form(void) : _name("unspoiled"), _sign(false), _grad_sign(1), _grad_exec(1
 Form::Form(const std::string name, const int grad_sign, const int grad_exec) : _name(name), _sign(false), _grad_sign(grad_sign), _grad_exec(grad_exec)
 {
     if (this->_grad_sign < 1 || this->_grad_exec < 1)
-        throw Bureaucrat::GradeTooHighException();
+        throw Form::GradeTooHighException();
     else if (this->_grad_sign > 150 || this->_grad_exec > 150) 
-        throw Bureaucrat::GradeTooLowException();
+        throw Form::GradeTooLowException();
 }
 Form::Form(const Form &cop) : _name(cop.getName()), _sign(cop.getSign()),
          _grad_sign(cop.getGradSign()), _grad_exec(cop.getGradExec())

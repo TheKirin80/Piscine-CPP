@@ -8,9 +8,9 @@ AForm::AForm(void) : _name("unspoiled"), _target("unknow"), _sign(false), _grad_
 AForm::AForm(const std::string name, const std::string target, const int grad_sign, const int grad_exec) : _name(name), _target(target), _sign(false), _grad_sign(grad_sign), _grad_exec(grad_exec)
 {
     if (this->_grad_sign < 1 || this->_grad_exec < 1)
-        throw Bureaucrat::GradeTooHighException();
+        throw AForm::GradeTooHighException();
     else if (this->_grad_sign > 150 || this->_grad_exec > 150) 
-        throw Bureaucrat::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 }
 AForm::AForm(const AForm &cop) : _name(cop.getName()), _target(cop.getTarget()), _sign(cop.getSign()),
          _grad_sign(cop.getGradSign()), _grad_exec(cop.getGradExec())
