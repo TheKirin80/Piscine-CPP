@@ -1,30 +1,30 @@
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef INTERN_HPP
+#define INTERN_HPP
 
-class Form
+class Intern
 {
     public :
-        Form(void);
-        Form(const Form &cop);
-        Form &operator=(const Form &eg);
-        virtual ~Form(void);
+        Intern(void);
+        Intern(const Intern &cop);
+        Intern &operator=(const Intern &eg);
+        virtual ~Intern(void);
     private :
 
 };
 
 #endif
 
-#include "Form.hpp"
+#include "Intern.hpp"
 
-Form::Form(void)
+Intern::Intern(void)
 {
     return;
 }
-Form::Form(const Form &cop)
+Intern::Intern(const Intern &cop)
 {
     *this = cop;
 }
-Form &Form::operator=(const Form &eg)
+Intern &Intern::operator=(const Intern &eg)
 {
     if (this != &eg)
     {
@@ -32,18 +32,18 @@ Form &Form::operator=(const Form &eg)
     }
     return (*this);
 }
-Form::~Form(void)
+Intern::~Intern(void)
 {
     return;
 }
 
-std::string Form::getGradSign(void) const
+std::string Intern::getTarget(void) const
 {
-    return (this->_grad_sign);
+    return (this->_target);
 }
 
-void Form::setGrad_sign(std::string str)
+void Intern::settarget(std::string str)
 {
-    this->_grad_sign = str;
+    this->_target = str;
 }
 
