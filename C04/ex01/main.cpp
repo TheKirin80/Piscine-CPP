@@ -26,20 +26,20 @@ int main()
     // delete j;
     // delete meta;
 
-    std::cout << "Premier Test ---------------------------------------------------" << std::endl;
-    const Animal *all[100];
-    int	i;
+    // std::cout << "Premier Test ---------------------------------------------------" << std::endl;
+    // const Animal *all[100];
+    // int	i;
 
-    for(i = 0; i < 50; i++)
-        all[i] = new Dog();
-    for(i = 50; i < 100;i++)
-        all[i] = new Cat();
-    for(i = 0; i < 100; i++)
-    {
-        std::cout << "Animal number: " << i << std::endl;
-        all[i]->makeSound();
-        delete	all[i];
-    }
+    // for(i = 0; i < 50; i++)
+    //     all[i] = new Dog();
+    // for(i = 50; i < 100;i++)
+    //     all[i] = new Cat();
+    // for(i = 0; i < 100; i++)
+    // {
+    //     std::cout << "Animal number: " << i << std::endl;
+    //     all[i]->makeSound();
+    //     delete	all[i];
+    // }
     // std::cout << "Second Test ---------------------------------------------------" << std::endl;
     // const	Dog *vDog = new Dog();
     // const	Cat *vCat = new Cat();
@@ -66,5 +66,6 @@ int main()
     // Dog pardon;
     // pardon = test;
     // std::cout << "///////////////////////////////////////" << std::endl;
+    
     return (0);
 }
