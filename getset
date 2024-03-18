@@ -1,30 +1,30 @@
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#ifndef Data_HPP
+#define Data_HPP
 
-class ScalarConverter
+class Data
 {
     public :
-        ScalarConverter(void);
-        ScalarConverter(const ScalarConverter &cop);
-        ScalarConverter &operator=(const ScalarConverter &eg);
-        virtual ~ScalarConverter(void);
+        Data(void);
+        Data(const Data &cop);
+        Data &operator=(const Data &eg);
+        virtual ~Data(void);
     private :
 
 };
 
 #endif
 
-#include "ScalarConverter.hpp"
+#include "Data.hpp"
 
-ScalarConverter::ScalarConverter(void)
+Data::Data(void)
 {
     return;
 }
-ScalarConverter::ScalarConverter(const ScalarConverter &cop)
+Data::Data(const Data &cop)
 {
     *this = cop;
 }
-ScalarConverter &ScalarConverter::operator=(const ScalarConverter &eg)
+Data &Data::operator=(const Data &eg)
 {
     if (this != &eg)
     {
@@ -32,17 +32,17 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &eg)
     }
     return (*this);
 }
-ScalarConverter::~ScalarConverter(void)
+Data::~Data(void)
 {
     return;
 }
 
-std::string ScalarConverter::getTarget(void) const
+std::string Data::getTarget(void) const
 {
     return (this->_target);
 }
 
-void ScalarConverter::settarget(std::string str)
+void Data::settarget(std::string str)
 {
     this->_target = str;
 }

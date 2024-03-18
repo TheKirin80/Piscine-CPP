@@ -92,8 +92,8 @@ void ScalarConverter::convert (std::string str)
                 std::cout << "impossible" << std::endl;
             else
                 std::cout << static_cast<int>(stack) << std::endl;
-            std::cout << "float : " << static_cast<float>(stack) << "f" << std::endl;
-            std::cout << "double : " << stack << std::endl;
+            std::cout << "float : " << std::fixed << std::setprecision(1) << static_cast<float>(stack) << "f" << std::endl;
+            std::cout << "double : " << std::fixed << std::setprecision(1) << stack << std::endl;
         }
         //------FLOAT-----
         else if (ret == 0)
@@ -111,8 +111,8 @@ void ScalarConverter::convert (std::string str)
                 std::cout << "impossible" << std::endl;
             else
                 std::cout << static_cast<int>(stack) << std::endl;
-            std::cout << "float : " << stack << "f" << std::endl;
-            std::cout << "double : " << static_cast<double>(stack) << std::endl;
+            std::cout << "float : " << std::fixed << std::setprecision(1) << stack << "f" << std::endl;
+            std::cout << "double : " << std::fixed << std::setprecision(1) << static_cast<double>(stack) << std::endl;
         }
         else
             std::cout << "Bad expression" << std::endl;
