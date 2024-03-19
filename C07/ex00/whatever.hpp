@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include "whatever.hpp"
 
 template<typename T>
 void swap( T & x, T & y)

@@ -21,7 +21,7 @@ template <typename T> void print(T &fprint)
 }
 
 template<typename T>
-void inc(T &x)
+void increment(T &x)
 {
 	x++;
 	return;

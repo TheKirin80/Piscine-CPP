@@ -30,16 +30,16 @@ int main(void)
 
 	std::cout << BLUE << "-----Test tab fixe print-----" << RESET << std::endl;
 	iter(tab, 5, print);
-	std::cout << BLUE << "-----Test tab fixe inc-----" << RESET << std::endl;
-	iter(tab, 5, inc);
+	std::cout << BLUE << "-----Test tab fixe increment-----" << RESET << std::endl;
+	iter(tab, 5, increment);
 	std::cout << BLUE << "-----Test tab fixe print-----" << RESET << std::endl;
 	iter(tab, 5, print);
 	std::cout << BLUE << "-----Test tab2 class print-----" << RESET << std::endl;
 	iter(tab2, 5, print);
 	std::cout << BLUE << "-----Test tab3 fixe print-----" << RESET << std::endl;
 	iter(tab3, 5, print);
-	std::cout << BLUE << "-----Test tab3 fixe inc-----" << RESET << std::endl;
-	iter(tab3, 5, inc);
+	std::cout << BLUE << "-----Test tab3 fixe increment-----" << RESET << std::endl;
+	iter(tab3, 5, increment);
 	std::cout << BLUE << "-----Test tab3 fixe print-----" << RESET << std::endl;
 	iter(tab3, 5, print);
 	return (0);

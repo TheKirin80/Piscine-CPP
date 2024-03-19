@@ -5,7 +5,7 @@ INC		= -I includes -I /usr/include
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME 	= iter
+NAME 	= array
 
 CXX 		= c++
 
