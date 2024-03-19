@@ -9,6 +9,10 @@
 #include <climits>
 #include <iomanip>
 
+#define BLUE		"\033[1;34m"
+#define RESET		"\033[0m"
+
+
 class ScalarConverter
 {
     public :

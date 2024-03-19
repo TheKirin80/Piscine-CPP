@@ -31,6 +31,7 @@ void ScalarConverter::convert (std::string str)
     if ((str.size() == 1 && isdigit(str[0]) == 0) || (str[0] == '\0'))
     {
         char c = str[0];
+        std::cout << BLUE << "\t\tTYPE CHAR" << RESET << std::endl << std::endl;
         if (isprint(c))
             std::cout << "char : '" << c << "'" << std::endl;
         else
@@ -43,14 +44,16 @@ void ScalarConverter::convert (std::string str)
     else if (str == "nan" || str == "+inf" || str == "-inf" || str == "inf")
     {
         double stack = strtod(str.c_str(), NULL);
+        std::cout << BLUE << "\t\tTYPE DOUBLE" << RESET << std::endl << std::endl;
         std::cout << "char : impossible" << std::endl;
         std::cout << "int : impossible" << std::endl;
         std::cout << "float : " << static_cast<float>(stack) << "f" << std::endl;
         std::cout << "double : " << stack << std::endl;
     }
-    else if (str == "+inff" || str == "-inff" || str == "inff")
+    else if (str == "nanf" || str == "+inff" || str == "-inff" || str == "inff")
     {
         float stack = strtof(str.c_str(), NULL);
+        std::cout << BLUE << "\t\tTYPE FLOAT" << RESET << std::endl << std::endl;
         std::cout << "char : impossible" << std::endl;
         std::cout << "int : impossible" << std::endl;
         std::cout << "float : " << stack << "f" << std::endl;
@@ -65,6 +68,7 @@ void ScalarConverter::convert (std::string str)
         if (ret == 2) 
         {
             int stack = atoi(str.c_str());
+            std::cout << BLUE << "\t\tTYPE INT" << RESET << std::endl << std::endl;
             std::cout << "char : ";
             if (stack < -128 || stack > 127)
                 std::cout << "impossible" << std::endl;
@@ -80,6 +84,7 @@ void ScalarConverter::convert (std::string str)
         else if (ret == 1)
         {
             double stack = strtod(str.c_str(), NULL);
+            std::cout << BLUE << "\t\tTYPE DOUBLE" << RESET << std::endl << std::endl;
             std::cout << "char : ";
             if (stack < -128 || stack > 127)
                 std::cout << "impossible" << std::endl;
@@ -99,6 +104,7 @@ void ScalarConverter::convert (std::string str)
         else if (ret == 0)
         {
             float stack = strtof(str.c_str(), NULL);
+            std::cout << BLUE << "\t\tTYPE FLOAT" << RESET << std::endl << std::endl;
             std::cout << "char : ";
             if (stack < -128 || stack > 127)
                 std::cout << "impossible" << std::endl;
@@ -115,7 +121,13 @@ void ScalarConverter::convert (std::string str)
             std::cout << "double : " << std::fixed << std::setprecision(1) << static_cast<double>(stack) << std::endl;
         }
         else
-            std::cout << "Bad expression" << std::endl;
+        {
+            std::cout << BLUE << "\t\tTYPE UNKNOW" << RESET << std::endl << std::endl;
+            std::cout << "char : impossible" << std::endl;
+            std::cout << "int : impossible" << std::endl;
+            std::cout << "float : impossible" << std::endl;
+            std::cout << "double : impossible" << std::endl;
+        }
     }
 }
 

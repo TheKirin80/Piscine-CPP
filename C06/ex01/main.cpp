@@ -14,6 +14,8 @@ int main(void) {
 
 	data = new Data();
 
+	//data->_itest = 5;
+
 	std::cout << "data:\t\t" << data <<std::endl;
 	std::cout << "data->_itest:\t" << data->_itest <<std::endl;
     std::cout << "data->_ctest:\t" << data->_ctest <<std::endl;
