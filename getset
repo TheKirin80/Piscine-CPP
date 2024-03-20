@@ -1,30 +1,30 @@
-#ifndef Data_HPP
-#define Data_HPP
+#ifndef MutantStack_HPP
+#define MutantStack_HPP
 
-class Data
+class MutantStack
 {
     public :
-        Data(void);
-        Data(const Data &cop);
-        Data &operator=(const Data &eg);
-        virtual ~Data(void);
+        MutantStack(void);
+        MutantStack(const MutantStack &cop);
+        MutantStack &operator=(const MutantStack &eg);
+        virtual ~MutantStack(void);
     private :
 
 };
 
 #endif
 
-#include "Data.hpp"
+#include "MutantStack.hpp"
 
-Data::Data(void)
+MutantStack::MutantStack(void)
 {
     return;
 }
-Data::Data(const Data &cop)
+MutantStack::MutantStack(const MutantStack &cop)
 {
     *this = cop;
 }
-Data &Data::operator=(const Data &eg)
+MutantStack &MutantStack::operator=(const MutantStack &eg)
 {
     if (this != &eg)
     {
@@ -32,17 +32,17 @@ Data &Data::operator=(const Data &eg)
     }
     return (*this);
 }
-Data::~Data(void)
+MutantStack::~MutantStack(void)
 {
     return;
 }
 
-std::string Data::getTarget(void) const
+std::string MutantStack::getTarget(void) const
 {
     return (this->_target);
 }
 
-void Data::settarget(std::string str)
+void MutantStack::settarget(std::string str)
 {
     this->_target = str;
 }
