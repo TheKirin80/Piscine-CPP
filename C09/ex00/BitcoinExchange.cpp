@@ -128,6 +128,8 @@ bool BitcoinExchange::check_date(std::string const date)
     int day = atoi(date.substr(8).c_str());
     if (year < 2000 || year > 2025)
        return (false);
+    if (month == 0 || day == 0)
+        return (false);
     if (month > 12)
         return (false);
     if (month == 2 && day > 29) //fevrier

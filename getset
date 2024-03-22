@@ -1,30 +1,30 @@
-#ifndef RPN_HPP
-#define RPN_HPP
+#ifndef PMergeMe_HPP
+#define PMergeMe_HPP
 
-class RPN
+class PMergeMe
 {
     public :
-        RPN(void);
-        RPN(const RPN &cop);
-        RPN &operator=(const RPN &eg);
-        virtual ~RPN(void);
+        PMergeMe(void);
+        PMergeMe(const PMergeMe &cop);
+        PMergeMe &operator=(const PMergeMe &eg);
+        virtual ~PMergeMe(void);
     private :
 
 };
 
 #endif
 
-#include "RPN.hpp"
+#include "PMergeMe.hpp"
 
-RPN::RPN(void)
+PMergeMe::PMergeMe(void)
 {
     return;
 }
-RPN::RPN(const RPN &cop)
+PMergeMe::PMergeMe(const PMergeMe &cop)
 {
     *this = cop;
 }
-RPN &RPN::operator=(const RPN &eg)
+PMergeMe &PMergeMe::operator=(const PMergeMe &eg)
 {
     if (this != &eg)
     {
@@ -32,17 +32,17 @@ RPN &RPN::operator=(const RPN &eg)
     }
     return (*this);
 }
-RPN::~RPN(void)
+PMergeMe::~PMergeMe(void)
 {
     return;
 }
 
-std::string RPN::getTarget(void) const
+std::string PMergeMe::getTarget(void) const
 {
     return (this->_target);
 }
 
-void RPN::settarget(std::string str)
+void PMergeMe::settarget(std::string str)
 {
     this->_target = str;
 }
