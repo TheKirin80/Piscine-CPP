@@ -33,8 +33,10 @@ void BitcoinExchange::charg_data_map(std::string const &file)
     std::ifstream open_data;
     open_data.open(file.c_str());
     if (open_data.is_open() == false)
-        throw (DataProblemException());
+        throw (DataProblemException());  
     std::string line;
+    if (open_data.peek() == EOF) //Protege le fichier vide
+        throw (DataProblemException()); 
     //bool first = true; // permet de passer la premiere ligne du fichier CSV indiquant les infos des colonnes
     while (std::getline(open_data, line))
     {
@@ -63,6 +65,8 @@ void BitcoinExchange::traitement(std::string const &file)
     if (open_file.is_open() == false)
         throw (InputProblemException());
     std::string line;
+    if (open_file.peek() == EOF) 
+        throw (InputProblemException()); 
     std::getline(open_file, line);
     if(line.compare("date | value") != 0)
     {
@@ -94,7 +98,9 @@ void BitcoinExchange::traitement(std::string const &file)
                 v_val = BitcoinExchange::check_val(val);
                 if (v_val == true)
                 {
-                    std::cout << date << " => " << val << " = " << BitcoinExchange::calc_bit(date, val) << std::endl;
+                    float ret = BitcoinExchange::calc_bit(date, val);
+                    if (ret != -1) 
+                        std::cout << date << " => " << val << " = " << ret << std::endl;
                 }
             }
         }
@@ -190,6 +196,8 @@ bool BitcoinExchange::check_val(std::string const val)
 float  BitcoinExchange::calc_bit(std::string const date, std::string const val)
 {
     std::map<std::string, float>::const_iterator it_save;
+    if (this->_map.begin()->first > date)
+        return (std::cout << "La date est trop vieille par rapport au set de donnee desole" << std::endl, -1);
     for (std::map<std::string, float>::const_iterator it = this->_map.begin(); it != this->_map.end(); ++it)
     {   
         if (it->first == date)

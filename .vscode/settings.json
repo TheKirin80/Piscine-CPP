@@ -54,7 +54,11 @@
         "sstream": "cpp",
         "scalar": "c",
         "list": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "cerrno": "cpp",
+        "climits": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

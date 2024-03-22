@@ -21,8 +21,6 @@ int	main(void)
 		{
 			std::cout
 				<< "size: " << array.size() << std::endl
-				<< "array[0]: "<< array[0] << std::endl
-				<< "array[1]: " << array[1] << std::endl
 				<< "easyfind 21: " << *easyfind(array, 21) << std::endl
 				<< "easyfind 42: " << *easyfind(array, 42) << std::endl
 				<< "easyfind 0: " << *easyfind(array, 0) << std::endl
@@ -43,8 +41,6 @@ int	main(void)
 		{
 			std::cout
 				<< "size: " << array.size() << std::endl
-				<< "array[0]: "<< array[0] << std::endl
-				<< "array[1]: " << array[1] << std::endl
 				<< "easyfind 21: " << *easyfind(array, 21) << std::endl
 				<< "easyfind 42: " << *easyfind(array, 42) << std::endl
 				<< "easyfind 0: " << *easyfind(array, 0) << std::endl

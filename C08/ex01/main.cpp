@@ -47,7 +47,7 @@ int	main(void)
         
 		Span sp = Span(5);
 
-		sp.addNumber(19);
+		sp.addNumber(5);
 		sp.addNumber(3);
 		sp.addNumber(17);
 		sp.addNumber(9);
@@ -69,14 +69,14 @@ int	main(void)
 	}
     std::cout<< BLUE<< "\t\t\tSpan(n) avec une list de n random"<< RESET << std::endl;
     {
-        int n = 555;
-        int nbr_imp = 20;
+        int n = 10000;
+        int nbr_imp = 10000;
         Span sp = Span(n);
 
         std::list<int> list;
         for (int i = 0; i < nbr_imp; i++)
         {
-            int r = rand() % 300;
+            int r = rand() % 30000;
             list.push_back(r);
         }
         try
