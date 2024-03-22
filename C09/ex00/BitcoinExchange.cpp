@@ -84,18 +84,16 @@ void BitcoinExchange::traitement(std::string const &file)
         if (pip != std::string::npos && pip == 11 && line[pip - 1] == ' ' 
                 && (pip + 2) < line.size() && line[pip + 1] == ' ')
         {
-            bool v_date, v_val;
-            v_date = v_val = false;
             std::string date = line.substr(0, pip - 1);
             // On va check si la date correspond a nos attentes
-            v_date = BitcoinExchange::check_date(date);
+            bool v_date = BitcoinExchange::check_date(date);
             if (v_date != true)
                 std::cout << RED << "Error: bad input => " << date << RESET << std::endl;
             else
             {
                 //on va check si la valeur correspond a nos attentes
                 std::string val = line.substr(pip + 2);
-                v_val = BitcoinExchange::check_val(val);
+                bool v_val = BitcoinExchange::check_val(val);
                 if (v_val == true)
                 {
                     float ret = BitcoinExchange::calc_bit(date, val);
@@ -183,7 +181,7 @@ bool BitcoinExchange::check_val(std::string const val)
             return (false);
     }
     double value = strtod(val.c_str(), NULL);
-    if (value < 0 || value > 3000)
+    if (value < 0 || value > 1000)
     {
         std::cout << RED << "Error: too large a number." << RESET << std::endl;
         return (false);
@@ -197,7 +195,7 @@ float  BitcoinExchange::calc_bit(std::string const date, std::string const val)
 {
     std::map<std::string, float>::const_iterator it_save;
     if (this->_map.begin()->first > date)
-        return (std::cout << "La date est trop vieille par rapport au set de donnee desole" << std::endl, -1);
+        return (std::cout << RED << "La date est trop vieille par rapport au set de donnee desole" << RESET << std::endl, -1);
     for (std::map<std::string, float>::const_iterator it = this->_map.begin(); it != this->_map.end(); ++it)
     {   
         if (it->first == date)
