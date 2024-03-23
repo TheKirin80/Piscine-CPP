@@ -46,6 +46,7 @@ void PMergeMe::MergeInsertSort(t_vect &vect)
         it++;
     }
     t_vect envoy;
+    printp(vect_pair.begin(), vect_pair.end());
     for (t_vectp::iterator itp = vect_pair.begin(); itp != vect_pair.end(); ++itp) //On recupere ici les valeurs des plus grands
     {
         envoy.push_back(itp->first);
@@ -53,6 +54,15 @@ void PMergeMe::MergeInsertSort(t_vect &vect)
     PMergeMe::print(envoy.begin(), envoy.end());
     std::cout << "solo : " << solo << std::endl;
     // On va lancer ici la recursivite
+    if (envoy.size() > 1)
+        MergeInsertSort(envoy);
+    //On va chercher maintenant a trier via les pairs en remontant
+    // save = this->_vect_main;
+    // for (t_vect::iterator ite = envoy.begin(); ite != envoy.end(); ite++);
+    // {
+        
+    // }
+    
 }
 
 void PMergeMe::print(std::vector<int>::iterator begin, std::vector<int>::iterator end)
@@ -66,6 +76,19 @@ void PMergeMe::print(std::vector<int>::iterator begin, std::vector<int>::iterato
         i++;
         if (i % 5 == 0)
             std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+void PMergeMe::printp(t_vectp::iterator begin, t_vectp::iterator end)
+{
+    t_vectp::iterator it = begin;
+    std::cout << BLUE << "\t\tVECTOR PAIR" << RESET << std::endl;
+    int i = 0;
+    for (;it != end; ++it)
+    {
+        std::cout << "pair " << i << ": " << it->first << " | " << it->second << std::endl;
+        i++;
     }
     std::cout << std::endl;
 }

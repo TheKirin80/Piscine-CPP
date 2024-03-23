@@ -10,6 +10,7 @@
 #include <vector>
 #include <climits>
 #include <utility>
+#include <algorithm>
 
 #define BLUE		"\033[1;34m"
 #define RED			"\033[1;31m"
@@ -29,7 +30,9 @@ class PMergeMe
         virtual ~PMergeMe(void);
         void MergeInsertSort(t_vect &vect);
         void print(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+        void printp(t_vectp::iterator begin, t_vectp::iterator end);
         void print(std::deque<int>::iterator begin, std::deque<int>::iterator end);
+
     private :
         t_vect  _vect_main;
         t_vect  _vect_copy;

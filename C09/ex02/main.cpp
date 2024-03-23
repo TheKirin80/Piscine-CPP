@@ -9,8 +9,8 @@ void printe(std::vector<int>::iterator begin, std::vector<int>::iterator end)
     {
         std::cout << *it << " ";
         i++;
-        if (i % 5 == 0)
-            std::cout << std::endl;
+        // if (i % 5 == 0)
+        //     std::cout << std::endl;
     }
     std::cout << std::endl;
 }
@@ -49,12 +49,18 @@ int main(int ac, char **av)
         }
         double ret = strtod(param.c_str(), NULL);
         if (ret < 0  || ret > INT_MAX)
-            return (std::cout << RED << "ERROR PARAMETERS" << RESET << std::endl, 0); 
-        vect.push_back(static_cast<int>(ret));
-        deq.push_back(static_cast<int>(ret));
+            return (std::cout << RED << "ERROR PARAMETERS" << RESET << std::endl, 0);
+        t_vect::iterator it = find(vect.begin(), vect.end(), static_cast<int>(ret)); // Permet de verifier si la valeur est deja presente dans le vecteur auquel cas il ne l'insere pas de nouveau dans la liste
+        if (it == vect.end()) 
+        {
+            vect.push_back(static_cast<int>(ret));
+            deq.push_back(static_cast<int>(ret));
+        }
+        else
+            return (std::cout << RED << "ERROR DOUBLON PARAMETERS" << RESET << std::endl, 0);
     }
     printe(vect.begin(), vect.end());
-    printe(deq.begin(), deq.end());
+    // printe(deq.begin(), deq.end());
     PMergeMe me(vect);
     me.MergeInsertSort(vect);
     return (0);
