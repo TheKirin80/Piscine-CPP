@@ -11,6 +11,7 @@
 #include <climits>
 #include <utility>
 #include <algorithm>
+#include <ctime>
 
 #define BLUE		"\033[1;34m"
 #define RED			"\033[1;31m"
@@ -19,7 +20,7 @@
 typedef std::vector<int> t_vect;
 typedef std::deque<int> t_deq;
 typedef std::vector<std::pair<int, int> > t_vectp;
-typedef std::vector<std::pair<int, int> > t_deqp;
+typedef std::deque<std::pair<int, int> > t_deqp;
 class PMergeMe
 {
     public :
@@ -35,7 +36,12 @@ class PMergeMe
         void                vprint();
         void                vprintp(t_vectp::iterator begin, t_vectp::iterator end);
         //Fonction lier a deque
-        void    dprint(std::deque<int>::iterator begin, std::deque<int>::iterator end);
+        void                MergeInsertSort(t_deq &deq);
+        int                 SearchPair(t_deqp &deq_pair, int c);
+        void                Dichotomie(t_deq &deq, int val);
+        void                print(t_deq vect, std::string str);
+        void                dprint();
+        void                dprintp(t_deqp::iterator begin, t_deqp::iterator end);
 
     private :
         t_vect  _vect_main;
