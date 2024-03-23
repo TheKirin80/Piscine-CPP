@@ -59,10 +59,17 @@ int main(int ac, char **av)
         else
             return (std::cout << RED << "ERROR DOUBLON PARAMETERS" << RESET << std::endl, 0);
     }
+    //t_vect::iterator it = vect.begin();
+    // t_vect trou = vect;
+    // vect.insert(it, 50);
+    
+    //std::cout << "vect[2] " << vect[2] << std::endl;
     printe(vect.begin(), vect.end());
+    //printe(trou.begin(), trou.end());
     // printe(deq.begin(), deq.end());
-    PMergeMe me(vect);
+    PMergeMe me;
     me.MergeInsertSort(vect);
+    me.vprint();
     return (0);
     
 }

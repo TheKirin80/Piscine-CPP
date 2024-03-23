@@ -24,18 +24,21 @@ class PMergeMe
 {
     public :
         PMergeMe(void);
-        PMergeMe(t_vect &vect_copy);
         PMergeMe(const PMergeMe &cop);
         PMergeMe &operator=(const PMergeMe &eg);
         virtual ~PMergeMe(void);
-        void MergeInsertSort(t_vect &vect);
-        void print(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-        void printp(t_vectp::iterator begin, t_vectp::iterator end);
-        void print(std::deque<int>::iterator begin, std::deque<int>::iterator end);
+        //Fonction lier a vector
+        void                MergeInsertSort(t_vect &vect);
+        int                 SearchPair(t_vectp &vect_pair, int c);
+        void                Dichotomie(t_vect &vect, int val);
+        void                print(t_vect vect, std::string str);
+        void                vprint();
+        void                vprintp(t_vectp::iterator begin, t_vectp::iterator end);
+        //Fonction lier a deque
+        void    dprint(std::deque<int>::iterator begin, std::deque<int>::iterator end);
 
     private :
         t_vect  _vect_main;
-        t_vect  _vect_copy;
         t_deq   _deq_main;
 
 };
